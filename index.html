@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رؤية لحلول الأعمال | شريككم الاستراتيجي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Cairo', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: '#6A0DAD', // Main Purple
+                light: '#B57EDC',   // Lighter Purple
+                dark: '#4A0876',    // Darker Purple
+              },
+              secondary: '#1F3A93', // Dark Blue
+              accent: {
+                DEFAULT: '#B57EDC', // Lighter Purple as accent
+                light: '#D3B4EE',   // A very light purple
+              },
+              neutral: {
+                light: '#F9F9F9',    // Very light gray for backgrounds
+                DEFAULT: '#D3D3D3',  // Light Gray for borders
+                dark: '#4B4B4B',    // Dark Gray for text
+                darker: '#1C1C1C',   // Very Dark Gray for headings/footer
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        .group:hover .group-hover-item {
+            transform: translateX(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 2.75rem;
+            right: -0.875rem; /* -left-3.5 */
+            width: 1.25rem;
+            height: 1.25rem;
+            border-width: 4px;
+            border-color: #6A0DAD; /* primary color */
+            border-radius: 9999px;
+            background-color: white;
+            z-index: 10;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.7.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-neutral-darker leading-relaxed">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
